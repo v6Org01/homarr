@@ -8,4 +8,4 @@ RUN PUID=1000 PGID=2000 /app/entrypoint.sh
 RUN chown -R 1000:2000 /appdata
 USER 1000:2000
 ENTRYPOINT []
-CMD ["sh" "run.sh"]
+CMD ["/bin/sh", "run.sh"]
