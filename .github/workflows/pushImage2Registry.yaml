@@ -14,14 +14,13 @@ jobs:
     with:
       APPLICATION: ${{ vars.APPLICATION }}
       BUILD_ARGS: |
-        REGISTRY=${{ vars.REGISTRY_PRIVATE_PULL }}
-        REPO=ghcr.io/homarr-labs/homarr
+        REGISTRY=${{ vars.HOMARR_IMAGE_REGISTRY }}
+        REPO=${{ vars.HOMARR_IMAGE_REPO }}
         TAG=${{ vars.HOMARR_IMAGE_TAG }}
       PUSH_TO_PUBLIC: false
       PUSH_TO_PRIVATE: true
       OWNER: ${{ vars.OWNER }}
       REGISTRY_PRIVATE: ${{ vars.REGISTRY_PRIVATE }}
-      REGISTRY_PRIVATE_PULL: ${{ vars.REGISTRY_PRIVATE_PULL }}
       REGISTRY_PUBLIC: ${{ vars.REGISTRY_PUBLIC }}
       VERSION: ${{ vars.HOMARR_IMAGE_TAG }}
     secrets:
