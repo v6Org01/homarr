@@ -1,6 +1,6 @@
-ARG REGISTRY
-ARG REPO
-ARG TAG
+ARG REGISTRY=ghcr.io
+ARG REPO=homarr-labs/homarr
+ARG TAG=v1.38.0
 FROM ${REGISTRY}/${REPO}:${TAG}
 LABEL maintainer="dev_lau11@a.jlv6.com"
 RUN PUID=20009 PGID=20009 /app/entrypoint.sh
